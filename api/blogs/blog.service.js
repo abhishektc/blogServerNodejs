@@ -16,8 +16,7 @@ module.exports = {
 
 
     blogLists: callback => {
-        database.query(`SELECT * FROM blog ORDER BY updatedate DESC`,
-            [],
+        database.query(`SELECT * FROM blog`,
             (error, results, fields) => {
                 if (error) {
                     callback(error);

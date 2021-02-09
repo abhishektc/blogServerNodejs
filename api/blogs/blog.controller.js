@@ -27,8 +27,7 @@ module.exports = {
     blogList: (req, res) => {
 
         blogLists((err, results) => {
-            console.log(err);
-            console.log(results);
+            
             if (!!err) {
                 return res.status(500).json({
                     success: false,

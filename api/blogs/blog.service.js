@@ -16,12 +16,12 @@ module.exports = {
 
 
     blogLists: callback => {
-        database.query(`SELECT * FROM blog`,
+        database.query(`SELECT * FROM blog ORDER BY updatedate DESC`,
             (error, results, fields) => {
                 if (error) {
                     callback(error);
                 }
-                return callback(null, results.rows);
+                return callback(null, results);
             }
         );
     },

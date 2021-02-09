@@ -19,6 +19,6 @@ const proConfig = new Pool({
 });
 
 module.exports = {
-    database: process.env.NODE_ENV === "production" ? proConfig : localConfig,
+    database: proConfig,
     SECRET: 'abhishek'
 }
